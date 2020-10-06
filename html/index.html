@@ -4,67 +4,58 @@
 <head>
     <link href="/css/style1.css" rel="stylesheet" />
     <link href="/css/style2.css" rel="stylesheet" />
-
+    <link href="/css/meadiQueary.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
 
 </head>
 
-<body>
+<body onload="getData()">
 
     <div>
-        <div class="wrap-starting">
-
-            <div class="container-primary">
-
-                <div class="main_img">
-                    <a class="mood-img"></a>
-                </div>
-                <div class="sewcity-img">
-                    <img src="https://fabrics-media.moodfabrics.com/media/header-images/sewciety-logo.png">
-                </div>
-
-                <div class="gift-card">
-                    <p>Gift Cards</p>
-                </div>
-
-                <div class="free-shipping">
-                    <span><strong style="font-weight: 600;"><u>FREE SHIPPING</u></strong>
-                        DOMESTIC ORDERS $100+</span>
-                </div>
-
+        <div class="wrapper">
+            <div>
+                <a class="wrapper__moodlogo"></a>
             </div>
+            <div class="wrapper__sewcity">
+                <img src="https://fabrics-media.moodfabrics.com/media/header-images/sewciety-logo.png">
+            </div>
+
+            <div class="wrapper__gift-card">
+                <p>Gift Cards</p>
+            </div>
+
+            <div class="wrapper__gift-card--free-shipping">
+                <span><strong style="font-weight: 600;"><u>FREE SHIPPING</u></strong>
+                    DOMESTIC ORDERS $100+</span>
+            </div>
+
+
 
         </div>
 
 
         <!-- Header -->
         <header id="header">
-
-
             <!-- Navigation -->
 
-            <nav>
-                <div class="container">
-
-                    <div class="logo">
-
+            <nav class="nav">
+                <div class="nav__container">
+                    <div class="nav__logo">
                         <img src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/mood-sewciety-logo-1.png"
                             alt="Mood Sewciety">
                     </div>
-                    <ul class="menu">
+                    <ul class="nav__container nav__container--nav__menu">
                         <li><a href="">Free Sewing Patterns</a></li>
                         <li><a href="">On The Runway</a></li>
                         <li><a href="">Mood Online School of Sewing</a></li>
                         <li><a href="">About Us</a></li>
-                        <li><a href="">Shop</a></li>
+                        <li class="btn">Shop</li>
                     </ul>
-
-
                     <i class="fa fa-search" aria-hidden="true"></i>
-
-
                 </div>
             </nav>
             <!-- End Navigation -->
@@ -72,192 +63,225 @@
         <hr>
 
         <!-- main body -->
-        <div class="container1">
-            <ul>
-                <li><small>Home ></small></li>
-                <li><small>Design Patterns</small></li>
-                <li><small>The Water Lily Dress</small></li>
 
-            </ul>
+        <div class="bodycontainer">
+            <div>
+                <ul>
+                    <li><small>Home ></small></li>
+                    <li><small>Design Patterns</small></li>
+                    <li><small>The Water Lily Dress</small></li>
+                </ul>
+            </div>
+            <div class="col2">
+                <div class="dress">
+                    <div>
+                        <h2>THE WATER LILY DRESS – FREE SEWING PATTERN</h2>
+                        <!--  -->
+                        <div class="dress__small-icons">
+                            <div>
+                                <h6> Courtney Norris - Aug 10 2020</h6>
+                            </div>
+                            <div>
+                                <small>Share :</small>
+                                <small><i class="fab fa-pinterest-p"></i></small>
+                                <small><i class="fab fa-instagram"></i></small>
+                                <small><i class="fab fa-twitter"></i></small>
+                                <small><i class="fab fa-facebook"></i></small>
 
-            <div class="dress">
-                <div>
-                    <h2>THE WATER LILY DRESS – FREE SEWING PATTERN</h2>
-
-
-                    <!--  -->
-                    <div class="small-icons">
-                        <div>
-                            <h6> Courtney Norris - Aug 10 2020</h6>
+                            </div>
                         </div>
-                        <div>
-                            <small>Share :</small>
-                            <small><i class="fab fa-pinterest-p"></i></small>
-                            <small><i class="fab fa-instagram"></i></small>
-                            <small><i class="fab fa-twitter"></i></small>
-                            <small><i class="fab fa-facebook"></i></small>
 
+                        <!--  -->
+                        <div class="dress__lilydress-details">
+                            <div>
+                                <img src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/IMG_9238.jpg"
+                                    alt="">
+                            </div>
+                            <article>Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been the industry's
+                                standard dummy text ever since the 1500s, when an unknown printer
+                                took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letrasetsheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software
+                                like Aldus PageMaker including versions of Lorem Ipsum.</article>
                         </div>
+
+                        <!-- cart page -->
+                        <div class="dress__cart-container">
+                            <div class="dress__cart">
+                                <p style="color:black;float:right;cursor: pointer;" onclick="closeCart()">&times;</p>
+                                <div class="dress__cart-details">
+                                    <h4>MATERIAL USED TO MAKE</h4>
+                                    <small>Size</small>
+                                    <div>
+                                        <button class="btn btn--size-btn">S</button>
+                                        <button class="btn btn--size-btn1">M</button>
+                                        <button class="btn btn--size-btn">L</button>
+                                    </div>
+    
+                                </div>
+                                <div >
+                                     <div class="dress__allitems">
+                                    <div class="dress__cart-items">
+    
+                                       
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8UnVAXiTk2hTcSRZTuugRP30wrTDz43C7mg&usqp=CAU"
+                                            alt="">
+                                        <div class="dress__items-details">
+                                            <h4>3 Yards Le Muse Cotton Voile</h4>
+                                            <div >
+                                                <select id="select1" onclick="quantity('select1','price1','originalprice1')">
+                                                    <option>3</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+    
+                                                </select>
+                                                <p >$<span  id="price1">29.99</span>  ($<small id="originalprice1">9.99</small>/yard)</p>
+                                                <!-- <small  style="display: flex;float: right;transform: translate(-75px,-30px);"> -->
+                                                    <p style="float: right;"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dress__cart-items">
+    
+                                       
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScP-LeGJhwORJLRTG5iBAYE0N7zSb7fAWWVw&usqp=CAU"
+                                            alt="">
+                                        <div class="dress__items-details">
+                                            <h4>1 Yard Le Muse Cotton Voile</h4>
+                                            <select onclick="quantity('select2','price2','originalprice2')" id="select2">
+                                                <option>1.5</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+    
+                                            </select>
+                                            <p >$<span  id="price2">12.49</span>  ($<small id="originalprice2">15.99</small>/yard)</p>
+                                        </div>
+                                    </div>
+                                    <div class="dress__cart-items">
+    
+                                       
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQm-H4RR8e27hhIIjvcu-5Fvjy4VV5khrXA5w&usqp=CAU"
+                                            alt="">
+                                        <div class="dress__items-details">
+                                            <h4>1.5 Yards Le Dusty Cotton Voile</h4>
+                                            <select onclick="quantity('select3','price3','originalprice3')" id="select3">
+                                                <option>1</option>
+                                                <option>0</option>
+                                                <option>1.5</option>
+                                                <option>2</option>
+    
+                                            </select>
+                                            <p >$<span  id="price3">15.99</span>  ($<small id="originalprice3">10.49</small>/yard)</p>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                    <div class="btn btn--buy">
+    
+                                        <button class="btn" onclick="proceed()">Proceed</button>
+                                        <p>Total:$<strong id="total">0.00</strong></p>
+                                    </div>
+    
+                                </div>
+    
+                           
+    
+                            </div>
+                            </div>
+                        <div class="dress__suggestion">
+                           <button class="btn btn--downloadimg" ><i class="fas fa-download"></i></button> 
+                           <button class="btn btn--video"><i class="fas fa-play-circle"></i></button>
+                            <button class="btn btn--purchase" onclick="cartPage()">Buy Now</button>
+                        </div>
+                        <hr>
+                        
+                    </div>
+                    <div class="dress__rightcontent">
+                       
+                        <div id="widgeet">
+                            <a href="" class="btn btn--download">Download Free Pattern</a>
+                            <p class="btn btn--tutorial">Watch Tutorial</p>
+                        </div>
+                        
+                     
+                        <div class="free-service">
+                            <h5>Free service Pattern</h5>
+                            <h4>Active wear & Athleisure</h4>
+                            <hr>
+                            <h4>basic Sewing Pattern</h4>
+                            <hr>
+                            <h4>Complay Pattern</h4>
+                            <hr>
+                            <h4>Dress Pattern</h4>
+                            <hr>
+
+                            <select>
+                                <option value="More">More</option>
+                            </select>
+                        </div>
+
                     </div>
 
-                    <!--  -->
-                    <div class="dress-details">
-                        <div>
-                            <img src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/IMG_9238.jpg"
-                                alt="">
-                        </div>
-                        <article>Lorem Ipsum is simply dummy text of the printing
-                            and typesetting industry. Lorem Ipsum has been the industry's
-                            standard dummy text ever since the 1500s, when an unknown printer
-                            took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of
-                            Letrasetsheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                            like Aldus PageMaker including versions of Lorem Ipsum.</article>
+
+
+
+
+                    <div class="dress__steps">
+                        <small>STEP 1/N</small>
+                        <h2>Create ruffles</h2>
+                        <p>First create each ohter of your skirt ruffles by attching two half
+                            circle at the sides with French seams .Press each seam and hem th eouter
+                            edge of each ruffle layer
+                        </p>
+
+                        <img style="margin-bottom: 10px;"
+                            src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/20200803_133232a.jpg"
+                            alt="">
+                        <hr>
                     </div>
-                    <hr>
+
+                    <div class="dress__steps">
+                        <small>STEP 2/N</small>
+                        <h2>Join The Extension</h2>
+                        <p>Create two separate skirt extensions, attaching the front and back pieces at the sides.
+                            The front portion should point up while theback points down. Since the skirt is unlined,
+                            I recommend using French seams here as well.</p>
+
+                        <img style="margin-bottom: 10px;"
+                            src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/20200805_150629a.jpg"
+                            alt="">
+                        <hr>
+                    </div>
+                    <div class="dress__steps">
+                        <small>STEP 3/N</small>
+                        <h2>Blind the dress</h2>
+                        <p>
+                            Attach one of your skirt ruffles along the bottom edge of one of your skirt extensions. This
+                            will be your middle ruffle, so if you’re doing contrasting layers, be sure to attach
+                            accordingly. Since this part can get tricky, I recommend using regular face-to-face seams
+                            and binding them with bias tape when your dress is complete.
+
+                        </p>
+
+                        <img style="margin-bottom: 10px;"
+                            src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/20200805_151406.jpg"
+                            alt="">
+
+                    </div>
                 </div>
-                <div class="right-part">
-                    <div id="widgeet">
-                        <a href="">Download Free Pattern</a>
-                        <p class="watch">Watch Tutorial</p>
-                    </div>
-                    <div class="cart">
-                        <div class="cart-details">
-                            <h4>MATERIAL USED TO MAKE</h4>
-                            <small>Size</small>
-                            <div class="size-btn">
-                                <button>S</button>
-                                <button>M</button>
-                                <button>L</button>
-                            </div>
-
-                        </div>
-                        <div>
-                            <div class="cart-items">
-
-                                <input type="checkbox">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8UnVAXiTk2hTcSRZTuugRP30wrTDz43C7mg&usqp=CAU"
-                                    alt="">
-                                <div class="cart-items-details">
-                                    <h4>3 Yards Le Muse Cotton Voile</h4>
-                                    <div onclick="quantity('select1','price1')" >
-                                    <select id="select1">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-
-                                    </select>
-                                    <strong id="price1">15.00</strong>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="cart-items">
-
-                                <input type="checkbox">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8UnVAXiTk2hTcSRZTuugRP30wrTDz43C7mg&usqp=CAU"
-                                    alt="">
-                                <div class="cart-items-details">
-                                    <h4>1 Yard Le Muse Cotton Voile</h4>
-                                    <select  onclick="quantity('select2','price2')" id="select2"  >
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-
-                                    </select>
-                                    <strong id="price2">15.00</strong>
-                                </div>
-                            </div>
-                            <div class="cart-items">
-
-                                <input type="checkbox">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8UnVAXiTk2hTcSRZTuugRP30wrTDz43C7mg&usqp=CAU"
-                                    alt="">
-                                <div class="cart-items-details">
-                                    <h4>1.5 Yards Le Dusty Cotton Voile</h4>
-                                    <select  onclick="quantity('select3','price3')" id="select3" >
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-
-                                    </select>
-                                    <strong id="price3">15</strong>
-                                </div>
-
-                            </div>
-                            <div class="buy-btn">
-
-                                <h3>Buy Now</h3>
-                                <p id="total">45</p>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <div class="free-service">
-                        <h5>Free service Pattern</h5>
-                        <h4>Active wear & Athleisure</h4>
-                        <hr>
-                        <h4>basic Sewing Pattern</h4>
-                        <hr>
-                        <h4>Complay Pattern</h4>
-                        <hr>
-                        <h4>Dress Pattern</h4>
-                        <hr>
-
-                        <select>
-                            <option value="More">More</option>
-                        </select>
-                    </div>
-
-                </div>
-
             </div>
-
-
-
-            <div class="step1">
-                <small>STEP 1/N</small>
-                <h2>Create ruffles</h2>
-                <p>texto não só sobreviveu 5 séculos, mas
-                    também o salto para a tipografia electrónica, this.best for hello get this mantendo-se
-                    essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilizaç.</p>
-
-                <img style="margin-bottom: 10px;"
-                    src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/20200803_133232a.jpg" alt="">
-                <hr>
-            </div>
-
-            <div class="step1">
-                <small>STEP 2/N</small>
-                <h2>Join The Extension</h2>
-                <p>texto não só sobreviveu 5 séculos, mas
-                    também o salto para a tipografia electrónica, this.best for hello get this mantendo-se
-                    essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilizaç.</p>
-
-                <img style="margin-bottom: 10px;"
-                    src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/20200805_150629a.jpg" alt="">
-                <hr>
-            </div>
-            <div class="step1">
-                <small>STEP 3/N</small>
-                <h2>Blind the dress</h2>
-                <p>texto não só sobreviveu 5 séculos, mas
-                    também o salto para a tipografia electrónica, this.best for hello get this mantendo-se
-                    essencialmenteinalterada. Foi popularizada nos anos 60 com a disponibilizaç.Letraset, que continham
-                    passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker
-                    que incluem versões do Lorem Ipsum.
-
-                </p>
-
-                <img style="margin-bottom: 10px;"
-                    src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/20200805_151406.jpg" alt="">
-
-            </div>
-
             <hr>
+        </div>
+
+            
             <!--Table  -->
+            <div class="middle-container">
             <div class="table">
                 <select>
                     <option>See the specifications for size</option>
@@ -268,12 +292,12 @@
             </div>
 
 
-            <!--Alternative  -->
-            <div class="alernative-wrapper">
-                <div class="alternative">
+            <!--design Pattern  -->
+            <div class="design">
+                <div class="design__alternative">
                     <h2><span>ALTERNATIVE FABRICS USED FOR DESIGN PATTERNS</span></h2>
                 </div>
-                <div class="vbc-images">
+                <div class="design__col-3">
                     <section>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-8LzB4QWTIuOYTwYIravyHXI3PsQXrMD5LA&usqp=CAU"
                             alt="">
@@ -293,9 +317,9 @@
             </div>
 
             <!-- comment-like  details -->
-            <div class="main-comment">
+            <div class="comment">
                 <hr>
-                <div class="count-comment">
+                <div class="comment__status">
 
                     <div>
                         <i class="far fa-comment"><small>5 comments</small></i>
@@ -313,7 +337,7 @@
                 </div>
 
                 <hr>
-                <div class="testomonials">
+                <div class="comment__testomonials">
                     <div>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfXL1iflbD4TSMWUsPxxVmAbqud5nrxacEQw&usqp=CAU"
                             alt="">
@@ -331,27 +355,28 @@
             </div>
 
             <!-- Leave commentt -->
-            <div id="comment" class="alernative-wrapper">
-                <div class="alternative">
+            <div id="comment" class="design">
+                <div class="design__alternative">
                     <h2><span>LEAVE US COMMENT</span></h2>
                 </div>
 
                 <div>
-                    <form >
+                    <form id="myform" onsubmit="addComment(event)">
 
-                        <input type="text" id="fname" name="firstname" placeholder="Name*">
-                        <textarea type="text" rows="5" cols="5">Your Comment </textarea>
-                         <input type="submit" value="Comment">
+                        <input class="comment__name" type="text" id="fname" name="firstname" placeholder="Name*">
+                        <textarea class="comment__name comment__name--comment-text" placeholder="Your Comment"
+                        id="cnttxt" type="text" rows="5" cols="5"></textarea>
+                        <input class="btn btn--submit" id="coment" type="submit" value="Comment">
                     </form>
                 </div>
 
-                <div class="alternative">
-                    <h2><span>5 COMMENTS</span></h2>
+                <div class="design__alternative">
+                    <h2  ><span id="total-comment">1 COMMENTS</span></h2>
                 </div>
 
                 <!-- Two Comments -->
-
-                <div class="testomonials">
+                <div id="testomonials">
+                <div class="comment__testomonials" >
                     <div>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfXL1iflbD4TSMWUsPxxVmAbqud5nrxacEQw&usqp=CAU"
                             alt="">
@@ -362,38 +387,29 @@
                             Wow so beautiful!
                         </strong>
 
-                        <small>Reply</small>
+                        <small >Reply 
+                            <span onclick="deleteComment()" style="float: right;"><i class="far fa-trash-alt"></i></span></small>
+                        <div>
+                        <!-- <input class="replyy" id="reply" type="text"> -->
+                    </div><br>
+                
                     </div>
 
 
                 </div>
+              </div>
                 <hr>
-                <div class="testomonials">
-                    <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfXL1iflbD4TSMWUsPxxVmAbqud5nrxacEQw&usqp=CAU"
-                            alt="">
-                    </div>
-                    <div>
-                        <small>Aislyn Abraham .Aug 28</small>
-                        <strong>
-                            This is beyond gorgeous ! I'm goona need someone tp get martried soon so I can wesar this...
-                        </strong>
-
-                        <small>Reply</small>
-                    </div>
-
-
-                </div>
+               
 
 
             </div>
 
             <!--  -->
-            <div class="alernative-wrapper">
-                <div class="alternative">
+            <div class="design">
+                <div class="design__alternative">
                     <h2><span>YOU MAY ALSO LIKE</span></h2>
                 </div>
-                <div class="vbc-images">
+                <div class="design__col-3">
                     <section>
                         <img src="https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/IMG_5854.jpg" alt="">
                         <h4>The Bellium Dress</h4>
@@ -420,11 +436,13 @@
         <!-- footer -->
         <footer id="footer-section">
             <div class="footer-body">
-                <div class="social-icons">
-                    <div class="icons">
+                <div class="footer-body__social-icons">
+                    <div class="footer-body__icons">
+                        <a>
                         <img class="i"
                             src="https://fabrics-media.moodfabrics.com/media/wysiwyg/social-icons/Instagram_1.png"
                             alt="Instagram">
+                        </a>
                         <a>
                             <img class="f"
                                 src="https://fabrics-media.moodfabrics.com/media/wysiwyg/social-icons/Facebook_1.png"
@@ -448,10 +466,10 @@
 
                 </div>
                 <div class="custom-main">
-                    <div class="footer1">
+                    <div class="sub-footer1">
 
-                        <div class="maintag-links"><span class="span-class">HELP</span> <br>
-                            <ul class="link">
+                        <div class="custom-main__maintag-links"><span class="span-class">HELP</span> <br>
+                            <ul class="custom-main__link">
                                 <li><a>FAQ</a></li>
                                 <li><a>Contact Us</a></li>
                                 <li><a>TrackOrder</a></li>
@@ -460,10 +478,10 @@
                         </div>
 
                     </div>
-                    <div class="footer2">
+                    <div class="sub-footer2">
 
-                        <div class="maintag-links"><span class="span-class">SHOP</span> <br>
-                            <ul class="link">
+                        <div class="custom-main__maintag-links"><span class="span-class">SHOP</span> <br>
+                            <ul class="custom-main__link">
                                 <li><a href="">FashionFabrics</a></li>
                                 <li><a href="">HomeFabrics</a></li>
                                 <li><a href="">Trims</a></li>
@@ -476,10 +494,10 @@
                         </div>
 
                     </div>
-                    <div class="footer3">
+                    <div class="sub-footer3">
 
-                        <div class="maintag-links"><span class="span-class">ABOUT</span> <br>
-                            <ul class="link">
+                        <div class="custom-main__maintag-links"><span class="span-class">ABOUT</span> <br>
+                            <ul class="custom-main__link">
                                 <li><a href="">About Us</a> </li>
                                 <li><a href="">International Shipping</a></li>
                                 <li><a href="">Custom FabricPrinting</a></li>
@@ -490,19 +508,11 @@
                         </div>
 
                     </div>
-                    <div class="footer4">
+                    <div class="sub-footer4">
 
-                        <div class="maintag-links"><span class="span-class">SEWCIETY</span> <br>
-                            <ul class="link">
-                                <li><a href="">FreeSewing Patterns</a></li>
-                                <li><a href="">On TheRunway</a></li>
-                                <li><a href="">Mood Online School of Sewing</a> </li>
-                                <li><a href="">AboutUs</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="maintag-links"><span class="span-class">TERMS AND CONDITIONS</span> <br>
-                            <ul class="link">
+                        
+                        <div class="custom-main__maintag-links"><span class="span-class">TERMS AND CONDITIONS</span> <br>
+                            <ul class="custom-main__link">
                                 <li><a href="">Accessibility</a></li>
                                 <li><a href="">Privacy policies</a></li>
                                 <li><a href="">Terms and Conditions</a></li>
@@ -510,24 +520,24 @@
                         </div>
 
                     </div>
-                    <div class="footer5">
+                    <div class="sub-footer5">
 
-                        <div class="maintag-links">
+                        <div class="custom-main__maintag-links">
                             <div>
                                 <span class="span-class"><strong>GET LATEST NEWS AND UDDATES</strong></span>
                             </div>
 
                             <form>
-                                <input type="text" placeholder="example@email.com"><span><input type="submit"
-                                        value="Submit"></span>
+                                <input class="comment__name comment__name--exa " type="text" placeholder="example@email.com"><span>
+                                    <input class="btn btn--sub" type="submit" value="Submit"></span>
                             </form>
-                            <div class="flex-container">
-                                <div class="list-class"><strong>WEBSITE INQUIRIES</strong><br><br>
+                            <div class="sub-footer5__flex-container">
+                                <div class="sub-footer5__list-class"><strong>WEBSITE INQUIRIES</strong><br><br>
                                     <div><strong>EMAIL: </strong>
-                                        <div>info@moodfabrics.com</div>
+                                        <div >info@moodfabrics.com</div>
                                     </div>
 
-                                    <div><strong>P1(855) 630-6663 </strong>
+                                    <div><strong>P <span class="custom-main__link">(855) 630-6663</span> </strong>
 
                                     </div>
                                     <br><br>
@@ -536,29 +546,29 @@
                                         <div>Sat-Sun: Closed</div>
                                     </div>
                                 </div>
-                                <div class="list-class"><strong>NEW YORK CITY</strong> <br><br>
-                                    <ul class="link">
+                                <div class="sub-footer5__list-class"><strong>NEW YORK CITY</strong> <br><br>
+                                    <ul class="custom-main__link">
                                         <li>225 W 37th St 3rd Floor</li>
                                         <li>New York, NY 10018</li>
                                         <li><strong>P </strong>(212) 730-5003</li>
                                         <li><strong>F </strong>(212) 221-1932</li>
                                     </ul>
                                     <br><strong>STORE HOURS</strong>
-                                    <ul class="link">
+                                    <ul class="custom-main__link">
                                         <li>Mon-Fri: 9am-7pm</li>
                                         <li>Sat: 10am-5pm</li>
                                         <li>Sun: Closed</li>
                                     </ul>
                                 </div>
-                                <div class="list-class"><strong>LOS ANGELES</strong> <br><br>
-                                    <ul class="link">
+                                <div class="sub-footer5__list-class"><strong>LOS ANGELES</strong> <br><br>
+                                    <ul class="custom-main__link">
                                         <li>1726 West Pico Blvd</li>
                                         <li>Los Angeles, CA 90015</li>
                                         <li><strong>P </strong>(323) 653-6663</li>
                                         <li><strong>F </strong>(323) 653-6660</li>
                                     </ul>
                                     <br><strong>STORE HOURS</strong>
-                                    <ul class="link">
+                                    <ul class="custom-main__link">
                                         <li>Mon-Fri: 9:30am-6:30pm</li>
                                         <li>Sat: 10am-6pm</li>
                                         <li>Sun: Closed</li>
