@@ -11,7 +11,7 @@ a{
     text-decoration: none;
 }
 :root{
-    --mains-color:#b4975a;
+    --mains-color:#B3975B;
     --main-style:'Open Sans',sans-serif;
     --mains1-color:rgb(135, 143, 126);
     --mains-white:#fff;
@@ -31,7 +31,9 @@ a{
     margin: 0 auto;
 }
 h2 span{
-    background: var(--mains-white);padding: 0 10px;
+    background: var(--mains-white);
+    padding: 0 10px;
+    color: black;
 }
 
 .design__col-3{
@@ -46,7 +48,7 @@ h2 span{
 }
 .design__col-3 h4{
     text-align: center;
-    color:var(--mains1-color);
+     font-weight:100;
     font-size: 1.5rem;
     margin: 19px auto;
 }
@@ -65,6 +67,7 @@ h2 span{
 
 .comment__status small{
     font-size: 1rem;
+    font-weight: 600;
     padding: 5px;
 }
 
@@ -121,6 +124,7 @@ h2 span{
   .comment__testomonials small{
       display: block;
       padding: 1rem;
+      color: var(--mains1-color);
       line-height: 0.8rem;
   }
   .comment__testomonials strong{

@@ -34,10 +34,17 @@ const total=()=>{
 
   let allitems=document.querySelectorAll('.dress__items-details span');
   var q=window.location.href.split('?')[1];
-     total_amount=0
- allitems.forEach( elem =>{
-   total_amount +=parseFloat(elem.innerHTML);
+     total_amount=0;
+     i=0
+ allitems.forEach( (elem,index) =>{
+   console.log(elem)
+  if(i<3)
+  { total_amount +=parseFloat(elem.innerHTML)
+  };
+  i++;
+
 })
+
   total_price.innerText=(total_amount).toPrecision(4);
   if(q){
     total_price.innerText=parseFloat(q)
@@ -163,13 +170,15 @@ const proceed=()=>{
   let optionalAdd=document.querySelectorAll('.dress__cart-items');
   let allDetails=document.querySelectorAll('.dress__items-details')
   // console.log(allDetails)
+  i=0;
       optionalAdd.forEach((element,index) =>{
-
-          let title=allDetails[index].querySelector('h4');
+   if(i<3)
+         { let title=allDetails[index].querySelector('h4');
           let stokes=allDetails[index].querySelector('select');
           let price=allDetails[index].querySelector('span');
           let image=element.querySelector('img');
-        setData.push({image:image.src,title:title.innerText ,stokes:stokes.value,price:price.innerText})
+        setData.push({image:image.src,title:title.innerText ,stokes:stokes.value,price:price.innerText})}
+        i++
   
       })
      localStorage.setItem("cart",JSON.stringify(setData))
@@ -257,8 +266,9 @@ const checkoutPage=()=>{
       </div>
   </div>
   </div>`
+  console.log("data",data.price)
     subtotal+=(parseFloat(data.price))
-    console.log(subtotal)
+    console.log("sub",subtotal)
   })
 
 
@@ -301,6 +311,51 @@ const deleteCart=(id)=>{
   console.log(cartDetail)
     localStorage.setItem("cart",JSON.stringify(cartDetail))
    checkoutPage();
+ }
+
+ const sizeButton=size=>{
+
+  let originalPrice1=document.getElementById("originalprice1");
+   let originalPrice2=document.getElementById("originalprice2");
+  let originalPrice3=document.getElementById("originalprice3");
+  let price1=document.getElementById("price1");
+  let price2=document.getElementById("price2");
+  let price3=document.getElementById("price3");
+  let quant1=document.getElementById('select1');
+  let quant2=document.getElementById('select2')
+  let quant3=document.getElementById('select3')
+        
+if(size==='S_size'){
+  originalPrice1.innerHTML=8.88;
+  originalPrice2.innerHTML=13.88;
+  originalPrice3.innerHTML=9.86;
+  price1.innerHTML= originalPrice1.innerHTML * quant1.value;
+  price2.innerHTML= originalPrice2.innerHTML * quant2.value;
+  price3.innerHTML= originalPrice3.innerHTML * quant3.value;
+  
+
+}
+if(size==='L_size'){
+  originalPrice1.innerHTML=10.66;
+  originalPrice2.innerHTML=17.88;
+  originalPrice3.innerHTML=11.27;
+  price1.innerHTML= originalPrice1.innerHTML * quant1.value;
+  price2.innerHTML= originalPrice2.innerHTML * quant2.value;
+  price3.innerHTML= originalPrice3.innerHTML * quant3.value;
+}
+if(size==='M_size'){
+  originalPrice1.innerHTML=9.99;
+  originalPrice2.innerHTML=15.99;
+  originalPrice3.innerHTML=10.49;
+  price1.innerHTML= originalPrice1.innerHTML * quant1.value;
+  price2.innerHTML= originalPrice2.innerHTML * quant2.value;
+  price3.innerHTML= originalPrice3.innerHTML * quant3.value;
+}
+
+
+total();
+
+
  }
 
 

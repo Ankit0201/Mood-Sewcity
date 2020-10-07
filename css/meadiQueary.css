@@ -1,4 +1,31 @@
-@media  only screen  and (max-width:850px) and (min-width:600px){
+
+@media only screen and (min-width:901px)and (max-width:1220px){
+    .dress__lilydress-details article {
+        line-height: 1.8rem;
+        margin-left: 22px;
+        font-size: 13px;
+      font-weight: bold;
+        
+    }
+    .dress {
+        display: grid;
+        grid-template-columns: 63% 40%;
+        grid-template-rows: 498px auto auto auto;
+    }
+    .dress__lilydress-details img {
+        width: 100%;
+        /* height: 93vh; */
+         height: 365px;
+    }
+
+
+}
+
+
+
+
+
+@media  only screen  and (max-width:900px) and (min-width:600px){
 
     *{
         
@@ -36,16 +63,14 @@
      .dress{
          display: unset;
      }
-     .dress__lilydress-details {
-        display: unset;
-    }
+     
     .dress__lilydress-details img {
         width: 100%;
-        height: 262px;
+        
     }
     .dress__lilydress-details article {
-        line-height: unset;
-        font-size: 1rem;
+        line-height: 2rem;
+        font-size: 13px;
         margin-bottom: 22px; 
         
     }
@@ -157,6 +182,9 @@
 }
 .free-service h4 {
     padding: 3px 0;
+}
+.dress__deskcart{
+    display:none
 }
 
 .btn--buy {
